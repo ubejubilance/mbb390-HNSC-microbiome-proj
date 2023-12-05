@@ -43,8 +43,8 @@ for (phylum in unique_phyla) {
       if ("Tumor" %in% subset_data$Type && "Paired Normal" %in% subset_data$Type) {
         wilcox_results <- wilcox.test(Abundance ~ Type, data = subset_data, paired = TRUE, exact = FALSE)
         wilcox_results_df <- rbind(wilcox_results_df, data.frame(Phylum = phylum,
-                                                                 W = wilcox_results$statistic,
-                                                                 p.value = wilcox_results$p.value))
+                                              W = wilcox_results$statistic,
+                                              p.value = wilcox_results$p.value))
         }
 }
 
